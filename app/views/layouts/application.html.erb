@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bills</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Bill Pay</a>
+
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li <% if params[:controller] == 'home' %>class='active'<% end %>><a href='<%= root_path %>'>Home</a></li>
+        <li <% if params[:controller] == 'payments' %>class='active'<% end %> ><a href="<%= payments_path %>">Payments</a></li>
+        <li <% if params[:controller] == 'companies' %>class='active'<% end %> ><a href="<%= companies_path %>">Companies</a></li>
+        <li <% if params[:controller] == 'payment_methods' %>class='active'<% end %> ><a href="<%= payment_methods_path %>">Payment Methods</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10"><%= yield %></div>
+  <div class="col-md-1"></div>
+</div>
+
+
+</body>
+</html>

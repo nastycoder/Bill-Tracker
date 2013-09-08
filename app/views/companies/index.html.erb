@@ -1,0 +1,42 @@
+
+<div>
+  <%= link_to 'New Company', new_company_path %>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading"><strong>Companies</strong></div>
+  <div class="panel-body">
+    <p> List of companies payable to. </p>
+  </div>
+
+  <table class='table'>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @companies.each do |company| %>
+        <tr>
+          <td><%= company.name %></td>
+          <td><%= company.description %></td>
+          <td><%= company.created_at %></td>
+          <td><%= company.updated_at %></td>
+          <td><%= link_to 'Show', company %></td>
+          <td><%= link_to 'Edit', edit_company_path(company) %></td>
+          <td><%= link_to 'Destroy', company, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+</div>
+
+

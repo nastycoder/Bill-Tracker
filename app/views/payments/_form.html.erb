@@ -1,0 +1,29 @@
+<%= form_for(@payment) do |f| %>
+    <% if @payment.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+          <ul>
+            <% @payment.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <%= collection_select(:payment, :company_id, Company.all, :id, :name) %>
+    <%= collection_select(:payment, :payment_method_id, PaymentMethod.all, :id, :name) %>
+
+    <div class="input-group">
+      <%= f.text_field :amount, :class => 'form-control', :placeholder => 'Amount' %>
+    </div>
+
+    <div class="input-group">
+      <%= f.text_field :date, :class => 'form-control', :placeholder => 'Date' %>
+    </div>
+
+    <br/>
+    <div class="actions">
+      <%= f.submit :class => 'btn btn-default' %>
+    </div>
+<% end %>

@@ -9,23 +9,27 @@
                 type: 'line'
             },
             title: {
-                text: 'Fruit Consumption'
+                text: 'Payments'
             },
             xAxis: {
-                categories: ['Apples', 'Bananas', 'Oranges']
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    month: '%b \'%y',
+                }
             },
             yAxis: {
                 title: {
-                    text: 'Fruit eaten'
+                    text: 'Bill amount'
                 }
             },
-            series: [{
-                name: 'Jane',
-                data: [1, 0, 4]
-            }, {
-                name: 'John',
-                data: [5, 7, 3]
-            }]
+            series: [
+                <% @companies.each do |company| %>
+                {
+                    name: '<%= company.name %>',
+                    data: [ <% company.payments.each do |payment| %> <%= payment.amount.to_s %>, <% end %> ]
+                } ,
+                <% end %>
+            ]
         });
     });
 </script>

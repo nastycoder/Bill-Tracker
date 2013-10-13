@@ -14,7 +14,7 @@
             xAxis: {
                 type: 'datetime',
                 dateTimeLabelFormats: {
-                    month: '%b \'%y',
+                    month: '%y-%b ',
                 }
             },
             yAxis: {
@@ -23,12 +23,20 @@
                 }
             },
             series: [
+                    // data: [[5, 2], [6, 3], [8, 2]]
                 <% @companies.each do |company| %>
                 {
                     name: '<%= company.name %>',
-                    data: [ <% company.payments.each do |payment| %> <%= payment.amount.to_s %>, <% end %> ]
+                    data: [
+                            <% company.payments.each do |payment| %>
+                                [
+                                    <%= payment.amount.to_s %>
+                                ],
+                            <% end %>
+                           ]
                 } ,
                 <% end %>
+
             ]
         });
     });

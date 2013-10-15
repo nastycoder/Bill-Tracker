@@ -2,8 +2,6 @@
 
 Bill-Tracker is a Rails 4.0 web app that leverages Ruby 2.0, Bootstrap 3.0, and Highcharts 3.0.  
 
-Please fork the code as you see fit.  Or, submit a pull request.  Both are welcome.
-
 **Installation**
 ```bash
 $ git clone git@github.com:cdcooksey/Bill-Tracker.git
@@ -12,30 +10,25 @@ $ bundle
 $ bundle install
 ```
 
+**Usage**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/highcharts-01.png)
 
-Things you may want to cover:
+The goal of this web app is to replace mint.com in a local environment -- securely.  
 
-* Ruby version
+Bill tracker requires you to add the companies you pay out to:
+![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Companies-01.png)
 
-* System dependencies
+Bill tracker requires you to add the payment methods you use to pay:
+![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Methods-01.png)
 
-* Configuration
+Input each bill as you pay it into the main screen:
+https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Payments-01.png
 
-* Database creation
+The web app will track your payments and graph them over time, giving you an improved outlook on how you are spending your money. 
 
-* Database initialization
+**Database**
 
-* How to run the test suite
+By default, the production and development enviroment use MySQL database with username ```bill_pay``` and password ```bill_pay```.  Obviously, this is the distrubtion credentials.  Change them.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Please fork the code as you see fit.  Or, submit a pull request.  Both are welcome.

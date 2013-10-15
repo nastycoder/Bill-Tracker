@@ -29,8 +29,8 @@ The web app will track your payments and graph them over time, giving you an imp
 
 ## **Database**
 
-***
-
 By default, the production and development enviroment use MySQL database with username ```bill_pay``` and password ```bill_pay```.  Obviously, this is the distrubtion credentials.  Change them.
+
+***
 
 Please fork the code as you see fit.  Or, submit a pull request.  Both are welcome.

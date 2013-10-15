@@ -1,8 +1,8 @@
-### README
+# README
 
 Bill-Tracker is a Rails 4.0 web app that leverages Ruby 2.0, Bootstrap 3.0, and Highcharts 3.0.  
 
-**Installation**
+## **Installation**
 ```bash
 $ git clone git@github.com:cdcooksey/Bill-Tracker.git
 $ cd Bill-Tracker/
@@ -10,7 +10,7 @@ $ bundle
 $ bundle install
 ```
 
-**Usage**
+## **Usage**
 
 ![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/highcharts-01.png)
 
@@ -27,7 +27,9 @@ Input each bill as you pay it into the main screen:
 
 The web app will track your payments and graph them over time, giving you an improved outlook on how you are spending your money. 
 
-**Database**
+## **Database**
+
+***
 
 By default, the production and development enviroment use MySQL database with username ```bill_pay``` and password ```bill_pay```.  Obviously, this is the distrubtion credentials.  Change them.
 

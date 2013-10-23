@@ -12,7 +12,7 @@ $ bundle install
 
 ## **Usage**
 
-![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/highcharts-01.png)
+![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/highcharts-02.png)
 
 The goal of this web app is to replace mint.com in a local environment -- securely.  
 

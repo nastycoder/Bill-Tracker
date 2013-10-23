@@ -17,7 +17,7 @@ $ bundle install
 The goal of this web app is to replace mint.com in a local environment -- securely.  
 
 Bill tracker requires you to add the companies you pay out to:
-![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Companies-01.png)
+![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Companies-02.png)
 
 Bill tracker requires you to add the payment methods you use to pay:
 ![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Methods-01.png)

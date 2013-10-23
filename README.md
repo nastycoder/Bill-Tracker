@@ -25,6 +25,9 @@ Bill tracker requires you to add the payment methods you use to pay:
 Input each bill as you pay it into the main screen:
 ![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Payments-01.png)
 
+![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Payments-02.png)
+
+
 The web app will track your bill payments and graph them over time, giving you an improved outlook on how you are spending your money. 
 
 ## **Database**

@@ -20,7 +20,7 @@ Bill tracker requires you to add the companies you pay out to:
 ![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Companies-02.png)
 
 Bill tracker requires you to add the payment methods you use to pay:
-![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Methods-01.png)
+![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Methods-02.png)
 
 Input each bill as you pay it into the main screen:
 ![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Payments-01.png)

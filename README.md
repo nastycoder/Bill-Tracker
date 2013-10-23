@@ -12,18 +12,21 @@ $ bundle install
 
 ## **Usage**
 
-![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/highcharts-01.png)
+![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/highcharts-02.png)
 
 The goal of this web app is to replace mint.com in a local environment -- securely.  
 
 Bill tracker requires you to add the companies you pay out to:
-![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Companies-01.png)
+![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Companies-02.png)
 
 Bill tracker requires you to add the payment methods you use to pay:
-![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Methods-01.png)
+![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Methods-02.png)
 
 Input each bill as you pay it into the main screen:
 ![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Payments-01.png)
+
+![mockup](https://raw.github.com/wiki/cdcooksey/Bill-Tracker/img/Payments-02.png)
+
 
 The web app will track your bill payments and graph them over time, giving you an improved outlook on how you are spending your money. 
 

@@ -4,13 +4,17 @@
 
 class PaymentMethods
     constructor: ->
+        @date_selector = '#payment_date'
         @bind_ui()
 
     bind_ui: ->
-        $('div.input-group').on 'click', '#payment_date', (event) => @datepicker event
+        $('div.input-group').on 'click', @date_selector, (event) => @datepicker event
 
     datepicker: (event) ->
-        $('#payment_date').datepicker()
+        $(@date_selector).datepicker
+            changeMonth: true
+            changeYear: true
+            dateFormat: "yy-mm-dd"
 
 $ -> # init
     new PaymentMethods

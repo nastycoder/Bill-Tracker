@@ -11,8 +11,15 @@
         </div>
     <% end %>
 
-    <%= collection_select(:payment, :company_id, Company.all, :id, :name) %>
-    <%= collection_select(:payment, :payment_method_id, PaymentMethod.all, :id, :name) %>
+    <div>
+      <label for='payment[company_id]'>Company:</label>
+      <%= collection_select(:payment, :company_id, Company.all, :id, :name) %>
+    </div>
+
+    <div>
+      <label for='payment[payment_method_id]'>Payment method:</label>
+      <%= collection_select(:payment, :payment_method_id, PaymentMethod.all, :id, :name) %>
+    </div>
 
     <div class="input-group">
       <%= f.text_field :amount, :class => 'form-control', :placeholder => 'Amount' %>

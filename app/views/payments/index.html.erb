@@ -1,7 +1,7 @@
-
-<%= link_to 'New Payment', new_payment_path %>
+<div> <%= link_to 'New Payment', new_payment_path, :class => 'btn btn-primary' %> </div>
 
 <br />
+
 <div class="panel panel-primary">
   <div class="panel-heading"><strong>Payments</strong></div>
   <div class="panel-body">
@@ -26,9 +26,9 @@
           <td><%= payment.company.name %></td>
           <td><%= payment.amount %></td>
           <td><%= payment.date.to_s %></td>
-          <td><%= link_to 'Show', payment %></td>
-          <td><%= link_to 'Edit', edit_payment_path(payment) %></td>
-          <td><%= link_to 'Destroy', payment, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          <td><%= link_to 'Show', payment, :class => 'btn btn-primary' %></td>
+          <td><%= link_to 'Edit', edit_payment_path(payment), :class => 'btn btn-primary' %></td>
+          <td><%= link_to 'Destroy', payment, :class => 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %></td>
         </tr>
     <% end %>
     </tbody>

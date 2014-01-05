@@ -1,7 +1,6 @@
+<div> <%= link_to 'New Company', new_company_path, :class => 'btn btn-primary' %> </div>
 
-<div>
-  <%= link_to 'New Company', new_company_path %>
-</div>
+<br />
 
 <div class="panel panel-primary">
   <div class="panel-heading"><strong>Companies</strong></div>
@@ -29,9 +28,9 @@
           <td><%= company.description %></td>
           <td><%= company.created_at.to_s %></td>
           <td><%= company.updated_at.to_s %></td>
-          <td><%= link_to 'Show', company %></td>
-          <td><%= link_to 'Edit', edit_company_path(company) %></td>
-          <td><%= link_to 'Destroy', company, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          <td><%= link_to 'Show', company, :class => 'btn btn-primary' %></td>
+          <td><%= link_to 'Edit', edit_company_path(company), :class => 'btn btn-primary' %></td>
+          <td><%= link_to 'Destroy', company, :class => 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %></td>
         </tr>
     <% end %>
     </tbody>

@@ -1,4 +1,10 @@
 json.array!(@companies) do |company|
-  json.extract! company, 
-  json.url company_url(company, format: :json)
+    json.name company.name
+    json.description company.description
+
+    json.payments company.payments do |payment|
+        json.amount number_to_currency payment.amount
+        json.date payment.date
+    end
 end
+

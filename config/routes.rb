@@ -1,10 +1,9 @@
 Bills::Application.routes.draw do
-  resources :payment_methods, :path => '/payment-methods'
-  get "home/index"
+  get 'home/index'
   root 'home#index'
+  resources :payment_methods, :path => '/payment-methods'
   resources :payments
   resources :companies
-
 
   # Example resource route with options:
   #   resources :products do

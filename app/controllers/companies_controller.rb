@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-  before_action :set_company, only: [:show, :edit, :update, :destroy]
+  before_action :set_company, only: [:show, :edit, :update, :destroy, :list]
 
   # GET /companies
   # GET /companies.json
@@ -59,6 +59,11 @@ class CompaniesController < ApplicationController
       format.html { redirect_to companies_url }
       format.json { head :no_content }
     end
+  end
+
+  def list
+    @companies = Company.all
+    render json: @companies
   end
 
   private

@@ -1,0 +1,43 @@
+<script src="http://code.highcharts.com/highcharts.js"></script>
+
+<div id="container" style="width:100%; height:400px;"></div>
+
+<script>
+    $(function () {
+        $('#container').highcharts({
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: 'Payments'
+            },
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    month: '%y-%b ',
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'Bill amount'
+                }
+            },
+            series: [
+                // data: [[5, 2], [6, 3], [8, 2]]
+                <% @companies.each do |company| %>
+                {
+                    name: '<%= company.name %>',
+                    data: [
+                        <% company.payments.each do |payment| %>
+                        [
+                            <%= payment.amount.to_s %>
+                        ],
+                        <% end %>
+                    ]
+                } ,
+                <% end %>
+
+            ]
+        });
+    });
+</script>

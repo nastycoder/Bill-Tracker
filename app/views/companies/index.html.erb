@@ -27,8 +27,8 @@
         <tr>
           <td><%= company.name %></td>
           <td><%= company.description %></td>
-          <td><%= company.created_at %></td>
-          <td><%= company.updated_at %></td>
+          <td><%= company.created_at.to_s %></td>
+          <td><%= company.updated_at.to_s %></td>
           <td><%= link_to 'Show', company %></td>
           <td><%= link_to 'Edit', edit_company_path(company) %></td>
           <td><%= link_to 'Destroy', company, method: :delete, data: {confirm: 'Are you sure?'} %></td>

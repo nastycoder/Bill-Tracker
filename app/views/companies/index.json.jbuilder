@@ -1,8 +1,7 @@
 json.(@companies) do |company|
-    json.name company.name
+    json.extract! company, :id, :name
     json.payments company.payments do |payment|
-        json.amount number_to_currency payment.amount
-        json.date payment.date
+        json.extract! payment, :id, :amount, :date
     end
 end
 

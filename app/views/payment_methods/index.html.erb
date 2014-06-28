@@ -2,38 +2,16 @@
 
 <br />
 
-<div class="panel panel-primary">
-  <div class="panel-heading"><strong>Payment Methods</strong></div>
-  <div class="panel-body">
-    <p> Checking account, credit cards, debit cards, etc. </p>
-  </div>
-
-  <table class='table'>
-    <thead>
+<%== table_helper 'Payment Methods', 'Checking account, credit cards, debit cards, etc.', ['Name', 'Desc', 'Created at', 'Updated at', '', '', ''] %>
+<% @payment_methods.each do |payment_method| %>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Created at</th>
-      <th>Updated at</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <td><%= payment_method.name %></td>
+      <td><%= payment_method.description %></td>
+      <td><%= payment_method.created_at %></td>
+      <td><%= payment_method.updated_at %></td>
+      <td><%= link_to 'Show', payment_method, :class => 'btn btn-primary' %></td>
+      <td><%= link_to 'Edit', edit_payment_method_path(payment_method), :class => 'btn btn-primary' %></td>
+      <td><%= link_to 'Destroy', payment_method, :class => 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %></td>
     </tr>
-    </thead>
-
-    <tbody>
-    <tbody>
-    <% @payment_methods.each do |payment_method| %>
-        <tr>
-          <td><%= payment_method.name %></td>
-          <td><%= payment_method.description %></td>
-          <td><%= payment_method.created_at %></td>
-          <td><%= payment_method.updated_at %></td>
-          <td><%= link_to 'Show', payment_method, :class => 'btn btn-primary' %></td>
-          <td><%= link_to 'Edit', edit_payment_method_path(payment_method), :class => 'btn btn-primary' %></td>
-          <td><%= link_to 'Destroy', payment_method, :class => 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %></td>
-        </tr>
-    <% end %>
-    </tbody>
-  </table>
-</div>
+<% end %>
+<%== end_table %>

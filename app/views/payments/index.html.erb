@@ -2,35 +2,15 @@
 
 <br />
 
-<div class="panel panel-primary">
-  <div class="panel-heading"><strong>Payments</strong></div>
-  <div class="panel-body">
-    <p> List of payments made. </p>
-  </div>
-
-  <table class='table'>
-    <thead>
+<%== table_helper 'Payments', 'List of payments', ['Company', 'Amount', 'Date', '', '', ''] %>
+<% @payments.each do |payment| %>
     <tr>
-      <th>Company</th>
-      <th>Amount</th>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <td><%= payment.company.name.to_s %></td>
+      <td><%= payment.amount.to_s %></td>
+      <td><%= payment.date.to_s %></td>
+      <td><%= link_to 'Show', payment, :class => 'btn btn-primary' %></td>
+      <td><%= link_to 'Edit', edit_payment_path(payment), :class => 'btn btn-primary' %></td>
+      <td><%= link_to 'Destroy', payment, :class => 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %></td>
     </tr>
-    </thead>
-
-    <tbody>
-    <% @payments.each do |payment| %>
-        <tr>
-          <td><%= payment.company.name %></td>
-          <td><%= payment.amount %></td>
-          <td><%= payment.date.to_s %></td>
-          <td><%= link_to 'Show', payment, :class => 'btn btn-primary' %></td>
-          <td><%= link_to 'Edit', edit_payment_path(payment), :class => 'btn btn-primary' %></td>
-          <td><%= link_to 'Destroy', payment, :class => 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %></td>
-        </tr>
-    <% end %>
-    </tbody>
-  </table>
-</div>
+<% end %>
+<%== end_table %>

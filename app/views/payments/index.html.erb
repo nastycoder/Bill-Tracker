@@ -2,15 +2,15 @@
 
 <br />
 
-<%== table_helper 'Payments', 'List of payments', ['Company', 'Amount', 'Date', '', '', ''] %>
-<% @payments.each do |payment| %>
-    <tr>
-      <td><%= payment.company.name.to_s %></td>
-      <td><%= payment.amount.to_s %></td>
-      <td><%= payment.date.to_s %></td>
-      <td><%= link_to 'Show', payment, :class => 'btn btn-primary' %></td>
-      <td><%= link_to 'Edit', edit_payment_path(payment), :class => 'btn btn-primary' %></td>
-      <td><%= link_to 'Destroy', payment, :class => 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %></td>
-    </tr>
+<%== table_helper 'Payments', 'List of payments', ['Company', 'Amount', 'Date', '', '', ''] do %>
+    <% @payments.each do |payment| %>
+        <tr>
+          <td><%= payment.company.name.to_s %></td>
+          <td><%= payment.amount.to_s %></td>
+          <td><%= payment.date.to_s %></td>
+          <td><%= link_to 'Show', payment, :class => 'btn btn-primary' %></td>
+          <td><%= link_to 'Edit', edit_payment_path(payment), :class => 'btn btn-primary' %></td>
+          <td><%= link_to 'Destroy', payment, :class => 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+    <% end %>
 <% end %>
-<%== end_table %>

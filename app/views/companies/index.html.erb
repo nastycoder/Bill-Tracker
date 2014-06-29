@@ -2,16 +2,16 @@
 
 <br />
 
-<%== table_helper 'Companies', '', ['Name', 'Desc', 'Created at', 'Updated at', '', '', ''] %>
-<% @companies.each do |company| %>
-    <tr>
-      <td><%= company.name %></td>
-      <td><%= company.description %></td>
-      <td><%= company.created_at.to_s %></td>
-      <td><%= company.updated_at.to_s %></td>
-      <td><%= link_to 'Show', company, :class => 'btn btn-primary' %></td>
-      <td><%= link_to 'Edit', edit_company_path(company), :class => 'btn btn-primary' %></td>
-      <td><%= link_to 'Destroy', company, :class => 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %></td>
-    </tr>
+<%== table_helper('Companies', '', ['Name', 'Desc', 'Created at', 'Updated at', '', '', '']) do %>
+    <% @companies.each do |company| %>
+        <tr>
+          <td><%= company.name %></td>
+          <td><%= company.description %></td>
+          <td><%= company.created_at.to_s %></td>
+          <td><%= company.updated_at.to_s %></td>
+          <td><%= link_to 'Show', company, :class => 'btn btn-primary' %></td>
+          <td><%= link_to 'Edit', edit_company_path(company), :class => 'btn btn-primary' %></td>
+          <td><%= link_to 'Destroy', company, :class => 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+        <% end %>
 <% end %>
-<%== end_table %>

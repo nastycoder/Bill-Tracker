@@ -4,7 +4,7 @@ class PaymentsController < ApplicationController
   # GET /payments
   # GET /payments.json
   def index
-    @payments = Payment.all(:order => 'date desc')
+    @payments = current_user.payments.order('date desc')
   end
 
   # GET /payments/1
@@ -24,7 +24,7 @@ class PaymentsController < ApplicationController
   # POST /payments
   # POST /payments.json
   def create
-    @payment = Payment.new(payment_params)
+    @payment = current_user.payments.new(payment_params)
 
     respond_to do |format|
       if @payment.save
@@ -64,7 +64,7 @@ class PaymentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_payment
-      @payment = Payment.find(params[:id])
+      @payment = current_user.payments.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

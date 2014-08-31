@@ -1,7 +1,12 @@
 require 'spec_helper'
 
 describe PaymentsController do
-  let(:payment) { Fabricate(:payment) }
+  let(:user) { Fabricate(:user) }
+  let(:company) { Fabricate(:company, user: user) }
+  let(:payment_method) { Fabricate(:payment_method, user: user) }
+  let(:payment) { Fabricate(:payment, company: company, payment_method: payment_method) }
+
+  before { set_user user }
 
   describe 'GET index' do
     it 'sets @payments' do

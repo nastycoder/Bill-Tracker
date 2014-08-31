@@ -1,7 +1,9 @@
 require 'spec_helper'
 
 describe CompaniesController do
-  let(:company) { Fabricate(:company) }
+  let(:user) { Fabricate(:user) }
+  let(:company) { Fabricate(:company, user: user) }
+  before { set_user(user) }
 
   describe 'GET index' do
     it 'sets @companies' do

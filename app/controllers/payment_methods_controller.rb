@@ -4,7 +4,7 @@ class PaymentMethodsController < ApplicationController
   # GET /payment_methods
   # GET /payment_methods.json
   def index
-    @payment_methods = PaymentMethod.all
+    @payment_methods = current_user.payment_methods
   end
 
   # GET /payment_methods/1
@@ -24,7 +24,7 @@ class PaymentMethodsController < ApplicationController
   # POST /payment_methods
   # POST /payment_methods.json
   def create
-    @payment_method = PaymentMethod.new(payment_method_params)
+    @payment_method = current_user.payment_methods.new(payment_method_params)
 
     respond_to do |format|
       if @payment_method.save
@@ -64,7 +64,7 @@ class PaymentMethodsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_payment_method
-      @payment_method = PaymentMethod.find(params[:id])
+      @payment_method = current_user.payment_methods.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

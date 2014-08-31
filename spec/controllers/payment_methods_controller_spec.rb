@@ -1,7 +1,10 @@
 require 'spec_helper'
 
 describe PaymentMethodsController do
-  let(:payment_method) { Fabricate(:payment_method) }
+  let(:user) { Fabricate(:user) }
+  let(:payment_method) { Fabricate(:payment_method, user: user) }
+
+  before { set_user(user) }
 
   describe 'GET index' do
     it 'sets @payment_methods' do

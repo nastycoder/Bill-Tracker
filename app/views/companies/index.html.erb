@@ -3,6 +3,7 @@
 <br />
 
 <%== table_helper('Companies', '', ['Name', 'Desc', 'Created at', 'Updated at', '', '', '']) do %>
+  <div/> <!-- hack to prevent empty block -->
     <% @companies.each do |company| %>
         <tr>
           <td><%= company.name %></td>

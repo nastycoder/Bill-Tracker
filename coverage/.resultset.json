@@ -11,7 +11,7 @@
         null,
         null,
         1,
-        37,
+        42,
         null,
         null,
         1,
@@ -19,12 +19,17 @@
         null,
         null,
         1,
-        37,
+        42,
         null,
         null,
         1,
-        37,
+        42,
         null,
+        null
+      ],
+      "/Users/uriah/Dev/Bill-Tracker/spec/support/macros.rb": [
+        1,
+        33,
         null
       ],
       "/Users/uriah/Dev/Bill-Tracker/spec/support/shared_examples.rb": [
@@ -51,7 +56,9 @@
         1,
         null,
         1,
+        12,
         8,
+        12,
         null,
         1,
         1,
@@ -197,13 +204,17 @@
         null,
         null,
         1,
+        1,
         null
       ],
       "/Users/uriah/Dev/Bill-Tracker/spec/controllers/payment_methods_controller_spec.rb": [
         1,
         null,
         1,
+        12,
         8,
+        null,
+        12,
         null,
         1,
         1,
@@ -348,7 +359,12 @@
         1,
         null,
         1,
+        12,
         8,
+        8,
+        8,
+        null,
+        12,
         null,
         1,
         1,
@@ -495,9 +511,11 @@
         null,
         1,
         2,
+        2,
         null
       ],
       "/Users/uriah/Dev/Bill-Tracker/app/models/company.rb": [
+        1,
         1,
         1,
         null
@@ -507,9 +525,11 @@
         null,
         1,
         2,
+        2,
         null
       ],
       "/Users/uriah/Dev/Bill-Tracker/app/models/payment_method.rb": [
+        1,
         1,
         1,
         null
@@ -528,10 +548,20 @@
         1,
         null
       ],
+      "/Users/uriah/Dev/Bill-Tracker/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null
+      ],
       "/Users/uriah/Dev/Bill-Tracker/spec/fabricators/company_fabricator.rb": [
         1,
         21,
         21,
+        1,
         null
       ],
       "/Users/uriah/Dev/Bill-Tracker/spec/fabricators/payment_fabricator.rb": [
@@ -546,9 +576,17 @@
         1,
         21,
         21,
+        1,
+        null
+      ],
+      "/Users/uriah/Dev/Bill-Tracker/spec/fabricators/user_fabricator.rb": [
+        1,
+        46,
+        46,
+        46,
         null
       ]
     },
-    "timestamp": 1408827910
+    "timestamp": 1409517187
   }
 }

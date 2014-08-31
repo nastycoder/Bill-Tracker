@@ -3,6 +3,7 @@
 <br />
 
 <%== table_helper 'Payment Methods', 'Checking account, credit cards, debit cards, etc.', ['Name', 'Desc', 'Created at', 'Updated at', '', '', ''] do %>
+  <div/> <!-- hack to prevent empty block -->
     <% @payment_methods.each do |payment_method| %>
         <tr>
           <td><%= payment_method.name %></td>

@@ -3,6 +3,7 @@
 <br />
 
 <%== table_helper 'Payments', 'List of payments', ['Company', 'Amount', 'Date', '', '', ''] do %>
+  <div/> <!-- hack to prevent empty block -->
     <% @payments.each do |payment| %>
         <tr>
           <td><%= payment.company.name.to_s %></td>
